@@ -1,0 +1,255 @@
+:root {
+  --bg_main: #0c2e69;
+  --text_light: #fff;
+  --text_med: #53627c;
+  --text_dark: #1e2432;
+  --red: #ff1e42;
+  --darkred: #c3112d;
+  --orange: #ff8c00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  font: 1rem/1.3 "Roboto", sans-serif;
+  background: var(--bg_main);
+  color: var(--text_dark);
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+.top {
+  color: var(--text_light);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  padding: 0 0 20px 0;
+}
+
+.form__box {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 20px 0;
+  align-items: center;
+}
+
+.form__box label {
+  font-size: 2rem;
+  padding-top: 20px;
+}
+
+.form__box input {
+  padding-top: 20px;
+  border-bottom: 1px solid;
+  font-size: 1rem;
+  margin-left: 15px;
+  width: 30%;
+}
+
+.form__box textarea {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  padding: 15px 15px 10px;
+  border-bottom: 1px solid;
+  margin-right: 15px;
+  width: 30%;
+}
+
+.top form input::placeholder {
+  color: currentColor;
+}
+
+.form__box button {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 15px 10px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background: var(--red);
+  transition: background 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.top form button:hover {
+  background: var(--darkred);
+}
+
+.main__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  grid-gap: 25px;
+  margin-top: 5px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px 10%;
+  border-radius: 20px;
+  background: var(--text_light);
+  color: var(--text_med);
+  box-shadow: 0 6px 20px rgb(245, 241, 241);
+  min-height: 100%;
+  margin-left: 15px;
+  top: 0;
+  transition: all 0.1s ease-in;
+  max-width: 350px;
+}
+
+.main__grid .city__temp {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text_dark);
+}
+
+.main__grid .city__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text_dark);
+}
+
+.main__grid figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  align-content: center;
+}
+.main__grid .city__temp sup {
+  font-size: 0.5em;
+}
+.main__grid .weather__icon {
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+  align-content: center;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
+  /*flex: 1;*/
+}
+.card__item p {
+  flex: 1;
+  line-height: 1.4;
+  padding-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+.card__item h3 {
+  text-align: center;
+  background-color: var(--red);
+  font-weight: bold;
+  padding-top: 6px;
+  color: #fff;
+}
+
+.feelings h4 {
+  padding-top: 6px;
+}
+
+#msg {
+  font-weight: bold;
+  font-size: medium;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  .main__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      margin-top: 5px;
+  }
+
+  .main__grid .city__temp {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 10px;
+      color: var(--text_dark);
+  }
+
+  .main__grid .city__name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text_dark);
+  }
+
+  .heading {
+      font-weight: bold;
+      font-size: 2rem;
+      letter-spacing: 0.02em;
+      padding: 0 0 20px 0;
+  }
+
+  .form__box label {
+      font-size: 1.5rem;
+      padding-top: 20px;
+  }
+
+  .form__box input {
+      padding-top: 20px;
+      border-bottom: 1px solid;
+      font-size: 1rem;
+      margin-left: 15px;
+      width: 50%;
+  }
+
+  .form__box textarea {
+      font-size: 1.5rem;
+      margin-left: 15px;
+      padding: 15px 15px 10px;
+      border-bottom: 1px solid;
+      margin-right: 15px;
+      width: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .main__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      margin-top: 5px;
+  }
+
+  .main__grid .city__name {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--text_dark);
+  }
+}
